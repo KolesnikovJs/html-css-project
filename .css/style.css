@@ -10,6 +10,12 @@
   color: #fefefe;
 }
 
+.button--outline {
+  border: 1px solid #fefefe;
+  background-color: transparent;
+  color: #fefefe;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -354,11 +360,17 @@ template {
 }
 
 .container {
+  width: 85%;
   max-width: 1256px;
   margin: auto;
 }
 
 .header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99;
   background-color: #131313;
   padding: 24px 0px;
 }
@@ -397,9 +409,33 @@ template {
 
 .hero {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 100px;
   background: #131313 url("../img/image 4.3 (1).jpg") no-repeat center/cover;
   height: 100vh;
   color: #fefefe;
+}
+
+.hero__content {
+  max-width: 570px;
+}
+
+.hero__text {
+  font-size: 22px;
+  max-width: 500px;
+}
+
+.hero__button {
+  margin-right: 20px;
 }
 
 .hero__instagram {
@@ -408,6 +444,27 @@ template {
   top: 0;
   max-width: 80px;
   height: 100%;
+}
+
+.hero__scroll-down {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 0;
+  bottom: 0;
+  min-width: 247px;
+  min-height: 97px;
+  background-color: #131313;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fefefe;
 }
 
 .instagram {
@@ -433,6 +490,17 @@ template {
 
 .title {
   margin: 0;
+  text-transform: uppercase;
+  font-size: 40px;
+}
+
+.title--primary {
+  color: #E3B873;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
